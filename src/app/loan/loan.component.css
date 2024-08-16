@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+.container {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-data
+{
+    color: black;
+}
+
+h2 {
+    color: black;
+    font-size: 1.2rem;letter-spacing: 2px;
+    margin: 10px 0;
+    font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 5px 0 15px 0;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: rgb(255, 0, 150);
+    outline: none;
+}
+
+button {
+    background: rgb(0, 153, 204);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: rgb(0, 204, 255);
+}
+
+h3 {
+    margin-top: 20px;
+    color: rgb(0, 204, 255);
+}
+h2{
+    text-align: center;
+}
+h3 h2 {
+    margin: 5px 0;
+}
+
+a {
+    color: rgb(255, 0, 150);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .container
+    {
+        width: 60%;
+        padding: 50px;
+        margin-top: 50%;
+    }
+    
+}

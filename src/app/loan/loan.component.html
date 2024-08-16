@@ -1,0 +1,26 @@
+
+<link rel="stylesheet" href="./loan.component.css">
+<div class="container">
+  <h2>Loan Eligibility - Finequs</h2>
+    <form #customerForm="ngForm" (ngSubmit)="onSubmit( customerForm )">
+      <h2>
+        Enter Your Name:
+        <input type="text" [(ngModel)]="name" name="name" class="name" required="" placeholder="Enter your name" required>
+      </h2>
+      <h2>
+        Enter Your Annual Income:
+        <input type="number" [(ngModel)]="annual" name="annual" class="annual" required="" placeholder="Enter Your Annual Income"
+         (input)="CalculateBureauScore()">
+      </h2>
+  
+      <button type="submit"  [disabled]="!customerForm.valid">Submit</button>
+  
+      <h3 *ngIf="submitted">
+        <h2 class="submit-data">Customer</h2>
+        <h2 class="submit-data">Name: {{ name }}</h2>
+        <h2 class="submit-data">Bureau Score: {{ bureauscore }}</h2>
+        <h2 class="submit-data" *ngIf="annual <= 200000 && annual >=10000" >Take a Loan Immediately: <a href="https://www.finequs.com">Get Loan</a></h2>
+      </h3>
+    </form>
+  </div>
+  
